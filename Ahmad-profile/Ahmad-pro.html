@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+
+
+
+    <style>
+        :root {
+            --pinkcolor: rgb(254, 29, 80);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(189, 124, 27);
+            color: whitesmoke;
+            font-family: Roboto;
+        }
+
+        nav {
+            height: 90px;
+            width: 100%;
+            background-color: rgb(189, 124, 27, 0.5);
+            position: fixed;
+            top: 0;
+            /* display: inline-block;*/
+
+        }
+
+        label.logo {
+            font-size: 30px;
+            line-height: 80px;
+            padding: 0 100px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            float: right;
+            margin-right: 150px;
+            margin-top: 20px;
+        }
+
+        nav ul li {
+            display: inline-block;
+            line-height: 60px;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: var(--pinkcolor);
+            transition: 0.5s;
+
+        }
+
+        .button {
+            float: right;
+            margin: 35px 20px;
+            padding: 7px 22px;
+            border-radius: 18px;
+            background-color: var(--pinkcolor);
+        }
+
+        .button:hover {
+            transform: scale(1.1);
+        }
+
+        .main {
+            width: 100%;
+            min-height: 150vh;
+            display: flex;
+            background-image: url("Petra1.png");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .section {
+            margin-top: 12rem;
+        }
+
+        .section p {
+            padding-left: 100px;
+        }
+
+        .section-info {
+            padding-bottom: 50px;
+            display: flex;
+            margin-top: 60px;
+            justify-content: center;
+        }
+
+        .section-info .img {
+            margin-right: 50px;
+        }
+
+        .section-info .contant {
+            width: 25%;
+            margin-top: 30px;
+        }
+
+        .section-info .contant div {
+            margin-bottom: 15px;
+        }
+
+        .section-info .title {
+            font-size: 50px;
+        }
+
+        .btn-primary {
+            padding: 7px 22px;
+            border-radius: 18px;
+            background-color: var(--pinkcolor);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(189, 124, 27);
+            border-color: var(--pinkcolor);
+        }
+
+        .service {
+            padding: 100px 0px;
+            background-color: rgb(197, 116, 34);
+        }
+
+        p.name {
+            font-size: 60px;
+            font-family: Haettenschweiler;
+            color: white;
+            text-decoration: none;
+
+
+        }
+
+
+        input[type="text"] {
+            margin-left: 100px;
+            padding: 10px 80px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 20px;
+        }
+
+        nav span,
+        .section span,
+        .section-info span {
+            color: var(--pinkcolor);
+        }
+
+
+
+
+
+        .btn-search {
+            background-color: rgb(85, 42, 42);
+            margin-top: 3px;
+            margin-left: 345px;
+            padding: 7px 22px;
+            border-radius: 18px;
+            background-color: var(--pinkcolor);
+            position: absolute;
+            left: 0;
+
+
+        }
+
+        .btn-search:hover {
+            transform: scale(1.1);
+
+        }
+
+        .search-container input {
+            position: relative;
+        }
+
+        .title {
+            display: flex;
+            justify-content: center;
+            font-size: 4.4em;
+            font-weight: 800;
+            margin-bottom: 30px;
+        }
+
+        .info {
+            text-align: center;
+        }
+
+        .info h3 {
+            font-size: 1.2em;
+            font-weight: 700;
+            margin: 20px;
+        }
+
+        .info p {
+            color: #796b7d;
+            margin-bottom: 10px;
+        }
+
+        .card {
+            background-color: rgb(219, 191, 139);
+            width: 21.25em;
+            box-shadow: 0 5px 25px black;
+
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            transition: 1.2s ease;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        .card .icon {
+            color: var(--pinkcolor);
+            font-size: 3em;
+            margin-left: 120px;
+        }
+
+        .icon {
+            display: inline-block;
+            margin: 10px;
+            text-decoration: none;
+        }
+
+        .more-work {
+            width: 100%;
+            background-color: rgba(222, 184, 135, 0.87);
+            text-align: center;
+            margin-top: 70px;
+            padding: 100px 0px;
+        }
+
+        .more-work h2 {
+            margin-bottom: 20px;
+        }
+
+        .facebook {
+            width: 50px;
+            height: 50px;
+            background-color: var(--pinkcolor);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+        }
+
+        .facebook:hover {
+            transform: scale(1.1);
+        }
+
+        .fb-icon::before {
+            content: '\f39e';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 28px;
+        }
+
+        .whatsapp {
+            width: 50px;
+            height: 50px;
+            background-color: var(--pinkcolor);
+            border-radius: 70%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .whatsapp:hover {
+            transform: scale(1.1);
+        }
+
+        .wa-icon::before {
+            content: '\f232';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            font-size: 28px;
+        }
+
+        .footer-icons .icon i {
+            font-size: medium;
+            color: white;
+        }
+
+        .footer-info {
+            color: #796b7d;
+            padding: 20px 0px;
+        }
+
+        .footer {
+            display: flex;
+            background-color: rgba(222, 184, 135, 0.87);
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <nav>
+            <button class="button">Subscribe</button>
+            <label class="logo">portfo<span>lio</span></label>
+            <ul>
+                <li> <a href="#">Home</a></li>
+                <li> <a href="#">About Us</a></li>
+                <li> <a href="#">Services</a></li>
+                <li> <a href="#">Skills</a></li>
+                <li> <a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="section">
+            <p>Hello, my name is </p>
+            <p class="name"> Ahmad <span>Soud</span></p>
+            <p><b>I'am a Web Developer</b></p>
+            <br><br>
+            <div class="search-container">
+                <input type="text" id="search" name="q" placeholder="Enter Your Email">
+                <button class="btn-search" type="submit">Let's Start</button>
+            </div>
+
+        </div>
+
+    </div>
+    <div class="section-info">
+        <div class="img">
+            <img src="Nature.jpeg" alt="" width="350" height="360">
+        </div>
+        <div class="contant">
+            <div>
+                <h2 class="title">About Me</h2>
+            </div>
+            <div>
+                <h3>Developer <span> & Designer</span></h3>
+            </div>
+            <div>
+                <p>
+                    I'm Ahmad Soud, i am full stack developer. With expertise in front-end and back-end
+                    technologies,I'm dedicated to creating efficient and innovative digital solutions.
+                    My passion for problem-solving and staying at the forefront of technology drives meto deliver
+                    meaningful results.
+                </p>
+            </div>
+            <div>
+                <button class="btn-primary">
+                    Let's Talk
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="service">
+        <section class="cards" id="services">
+            <h2 class="title">Our Services</h2>
+            <div class="content">
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bars"></i>
+                    </div>
+                    <div class="info">
+                        <h3>Web Developer</h3>
+                        <p>Every webside should be built with two primary gools Firstly, it needs to work ocross all
+                            devices Secondly.it needs to be fast as possible</p>
+                    </div>
+                    <div style="margin-left: 85px;">
+                        <button class="btn-primary">
+                            Read More
+                        </button>
+                    </div>
+
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="info">
+                        <h3>Web Developer</h3>
+                        <p>Every webside should be built with two primary gools Firstly, it needs to work ocross all
+                            devices Secondly.it needs to be fast as possible</p>
+                    </div>
+                    <div style="margin-left: 85px;">
+                        <button class="btn-primary">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <div class="info">
+                        <h3>Web Developer</h3>
+                        <p> Every webside should be built with two primary gools Firstly, it needs to work ocross all
+                            devices Secondly.it needs to be fast as possible</p>
+                    </div>
+                    <div style="margin-left: 85px;">
+                        <button class="btn-primary">
+                            Read More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="more-work">
+            <div>
+                <h2>Let Me Get You A Beautiful Website.</h2>
+            </div>
+            <div>
+                <button class="btn-primary">
+                    Hire Me
+                </button>
+            </div>
+        </div>
+
+    </div>
+    <div class="footer">
+        <div class="footer-title">
+            <h2>Ahmad Soud</h2>
+        </div>
+        <div class="footer-info">
+            <p>for more HTML, CSS and coding tutorial , please click on the
+                link below to subscribe to my channel;</p>
+        </div>
+        <div class="footer-icons">
+            <a class="icon" href="#">
+                <div class="facebook">
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+            </a>
+            <a class="icon" href="#">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </div>
+            </a>
+            <a class="icon" href="#">
+                <div class="whatsapp">
+                    <i class="fa-brands fa-edge"></i>
+                </div>
+            </a>
+        </div>
+
+    </div>
+</body>
+
+</html>
